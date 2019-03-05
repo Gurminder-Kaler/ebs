@@ -1,0 +1,59 @@
+{  
+   "menus":[  
+      {  
+         "section":"Resources",
+         "items":[  
+            {  
+               "title":"Users",
+               "url":"\/admin\/users"
+            },
+            {  
+               "title":"Roles",
+               "url":"\/admin\/roles"
+            },
+            {
+            	"title":"About Page Handler",
+            	"url":"\/admin\/about"
+            },
+            {
+               "title":"Contact Queries",
+               "url":"\/admin\/contact_queries"
+            },           
+            
+            {
+               "title":"Contact Us Footer",
+               "url":"\/admin\/contact_us_footer"
+            },
+            {
+               "title":"Services",
+               "url":"\/admin\/services"
+            },
+            {  
+               "title":"Permissions",
+               "url":"\/admin\/permissions"
+            },
+            {  
+               "title":"Pages",
+               "url":"\/admin\/pages"
+            },
+            {  
+               "title":"Activity Logs",
+               "url":"\/admin\/activitylogs"
+            },
+            {  
+               "title":"Settings",
+               "url":"\/admin\/settings"
+            }
+         ]
+      },
+      {  
+         "section":"Tools",
+         "items":[  
+            {  
+               "title":"Generator",
+               "url":"\/admin\/generator"
+            }
+         ]
+      }
+   ]
+}
