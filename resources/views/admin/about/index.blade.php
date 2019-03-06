@@ -9,7 +9,10 @@
             			ABOUT PAGE HANDLER
             		</div>
             		<div class="card-body">
+
             			 @include('admin.about.form', ['formMode' => 'edit'])
+                        
+                    
             		</div>
             	</div>
             	

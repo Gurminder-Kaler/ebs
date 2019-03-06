@@ -1,4 +1,5 @@
 @extends('layouts.backend')
+
 @section('content')
     <div class="container">
         <div class="row">
@@ -6,14 +7,14 @@
             <div class="col-md-9">
             	<div class="card">
             		<div class="card-header">
-            			Services Offered
+            			Portfolio
             		</div>
             		<div class="card-body">
-                        <a href="{{ url('/admin/services/create') }}" class="btn btn-success btn-sm" title="Add New Permission">
+                        <a href="{{ url('/admin/portfolio/create') }}" class="btn btn-success btn-sm" title="Add New Permission">
                             <i class="fa fa-plus" aria-hidden="true"></i> Add New
                         </a>
 
-                        {!! Form::open(['method' => 'GET', 'url' => '/admin/services', 'class' => 'form-inline my-2 my-lg-0 float-right', 'role' => 'search'])  !!}
+                        {!! Form::open(['method' => 'GET', 'url' => '/admin/portfolio', 'class' => 'form-inline my-2 my-lg-0 float-right', 'role' => 'search'])  !!}
                         <div class="input-group">
                             <input type="text" class="form-control" name="search" placeholder="Search...">
                             <span class="input-group-append">
@@ -32,7 +33,10 @@
                                 <thead>
                                     <tr>
                                         <th>ID</th>
-                                        <th>Services</th>
+                                        <th>Image</th>
+                                        <th>Portfolio Title</th>
+                                        <th>Tech. Used</th>
+                                        <th>Image</th>
                                       
                                     </tr>
                                 </thead>
@@ -41,16 +45,21 @@
                                     <tr>
                                         <td>{{ $item->id }}
                                         </td>
-                                        <td>{{ $item->services }}
+                                        <td><img src="{{ $item->img }}" alt="" width="100" height="100">
+                                        </td>                                        
+                                        <td>{{ $item->title }}
+                                        </td>
+                                        <td>{{ $item->tech_used }}
+                                        </td>
                                        	<td>
-                                       		<a href="{{url('admin/services/edit',$item->id)}}" class="btn btn-primary">Edit </a>
+                                       		<a href="{{url('admin/portfolio/edit',$item->id)}}" class="btn btn-primary">Edit </a>
                                        	</td>	
                                         <td>
 
                                                                                        
                                             {!! Form::open([
                                                 'method' => 'DELETE',
-                                                'url' => ['/admin/services/delete', $item->id],
+                                                'url' => ['/admin/portfolio', $item->id],
                                                 'style' => 'display:inline'
                                             ]) !!}
                                                 {!! Form::button('<i class="fa fa-trash-o" aria-hidden="true"></i>', array(
@@ -73,5 +82,5 @@
             	
             </div>
         </div>
-     </div>
-@endsection
+    </div>
+ @endsection

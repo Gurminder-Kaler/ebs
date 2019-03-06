@@ -1,3 +1,12 @@
+{!! Form::model($about, [
+                   'method' => 'PATCH',
+                   'url' => ['/admin/about/update', $about->id],
+                   'class' => 'form-horizontal',
+                   'enctype'=>'multipart/form-data'
+               ]) !!}
+
+               
+
 <div class="form-group{{ $errors->has('about_us_content') ? 'has-error' : ''}}">
     {!! Form::label('about_us_content', 'About Us Content:', ['class' => 'control-label']) !!}
     {!! Form::textarea('about_us_content', null, ['class' => 'form-control crud-richtext']) !!}
@@ -23,3 +32,4 @@
 <div class="form-group">
     {!! Form::submit($formMode === 'edit' ? 'Update' : 'Create', ['class' => 'btn btn-primary']) !!}
 </div>
+{!! Form::close() !!}

@@ -14,7 +14,8 @@ class FrontEndController extends Controller
     
     public function portfolio()
     {
-    	return view('portfolio.portfolio');
+        $port = DB::select('select * from portfolio');
+    	return view('portfolio.portfolio',compact('port'));
     }
     
 	public function contact()

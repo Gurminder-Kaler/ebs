@@ -33,19 +33,20 @@
                "url":"\/admin\/permissions"
             },
             {  
-               "title":"Pages",
-               "url":"\/admin\/pages"
+               "title":"Testimonials",
+               "url":"\/admin\/testimonials"
             },
             {  
-               "title":"Activity Logs",
-               "url":"\/admin\/activitylogs"
+               "title":"Portfolio Handler",
+               "url":"\/admin\/portfolio"
             },
             {  
                "title":"Settings",
                "url":"\/admin\/settings"
             }
          ]
-      },
+      }
+      ,
       {  
          "section":"Tools",
          "items":[  
